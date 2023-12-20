@@ -1,10 +1,35 @@
 package com.sulbaranjc.api.springcrud.service;
 
+import com.sulbaranjc.api.springcrud.entities.Auto;
 import com.sulbaranjc.api.springcrud.repository.AutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public interface IAutoServiceImpl implements IAutoservice {
+import java.util.Optional;
+
+@Service
+public class IAutoServiceImpl implements IAutoservice {
     @Autowired
-    private AutoRepository autoRepository
+    private AutoRepository autoRepository;
 
+
+    @Override
+    public Auto crear(Auto auto) {
+        return this.autoRepository.save(auto);
+    }
+
+    @Override
+    public Optional<Auto> obtenerPotId(Long id) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Auto actualizar(Long id, double nuevoPrecio) {
+        return null;
+    }
+
+    @Override
+    public boolean eliminar(Long id) {
+        return false;
+    }
 }

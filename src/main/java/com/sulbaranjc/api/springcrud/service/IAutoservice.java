@@ -6,10 +6,10 @@ import com.sulbaranjc.api.springcrud.entities.Auto;
 import java.util.Optional;
 
 public interface IAutoservice {
-    Auto save(Auto auto);
-    Optional<Auto> getById(Long id);
-    Auto update(Long id, double nuevoPrecio);
-    boolean delete(Long id);
+    Auto crear(Auto auto);
+    Optional<Auto> obtenerPotId(Long id);
+    Auto actualizar(Long id, double nuevoPrecio);
+    boolean eliminar(Long id);
 
 
 }
