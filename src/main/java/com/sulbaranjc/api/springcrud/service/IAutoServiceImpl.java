@@ -19,8 +19,8 @@ public class IAutoServiceImpl implements IAutoservice {
     }
 
     @Override
-    public Optional<Auto> obtenerPotId(Long id) {
-        return Optional.empty();
+    public Optional<Auto> obtenerPorId(Long id) {
+        return this.autoRepository.findById(id);
     }
 
     @Override
